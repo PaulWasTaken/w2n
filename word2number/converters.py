@@ -46,7 +46,7 @@ class RussianConverter(BaseConverter):
         elif len(numbers) == 3:
             return numbers[0] + numbers[1] + numbers[2]
         elif len(numbers) == 2:
-            if 100 in numbers:
+            if number_words[0] in russian_decimal_words:
                 return numbers[0] * numbers[1]
             else:
                 return numbers[0] + numbers[1]
@@ -109,6 +109,7 @@ russian_number_system = {
     'десять': 10,
     'одиннадцать': 11,
     'двенадцать': 12,
+    'дюжина': 12,
     'тринадцать': 13,
     'четырнадцать': 14,
     'пятнадцать': 15,
@@ -125,6 +126,7 @@ russian_number_system = {
     'восемьдесят': 80,
     'девяносто': 90,
     'сто': 100,
+    'сотня': 100,
     'двести': 200,
     'триста': 300,
     'четыреста': 400,
